@@ -15,8 +15,19 @@ const data = [
 var flag = -1;
 for (var i = 0; i < data.length; i++) {
   if (data[i].keyword == "bonfire" && data[i].prefix !== "not_applicable") {
-    // flag is set to the index of the element
-    console.log(data[i].prefix);
-    break;
+    if (data[i].prefix !== "not_applicable") {
+      console.log(data[i].prefix);
+      break;
+    } else {
+      let name = data[i].keyword;
+      let temp = name;
+      for (var i = 0; i < data.length; i++) {
+        if (temp.sclice(0, -1) === data[i].keyword) data[i].prefix = name;
+        else {
+          name.sclice(0, -1);
+        }
+      }
+    }
   }
 }
+console.log(data);
