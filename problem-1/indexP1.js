@@ -1,5 +1,4 @@
 const axios = require("axios");
-var http = require("http");
 const PrimeURL = "http://localhost:8090/primes";
 const FiboURL = "http://localhost:8090/fibo";
 const OddURL = "http://localhost:8090/odd";
@@ -33,5 +32,3 @@ axios
   .catch((errors) => {
     // react on errors.
   });
-
-server.listen(PORT, () => console.log(`Server has started on port ${PORT}`));
