@@ -1,4 +1,4 @@
-const axios = require("axios");
+const axios = require("./problem-1/node_modules/axios");
 
 let numbers = [];
 const URL = "http://localhost:8090";
